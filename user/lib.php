@@ -241,7 +241,7 @@ function user_get_users_by_id($userids) {
  * @return array of user fields
  */
 function user_get_default_fields() {
-    return array( 'id', 'username', 'fullname', 'firstname', 'lastname', 'email',
+    return array( 'id', 'username', 'fullname', 'firstname', 'middlename', 'lastname', 'email',
         'address', 'phone1', 'phone2', 'icq', 'skype', 'yahoo', 'aim', 'msn', 'department',
         'institution', 'interests', 'firstaccess', 'lastaccess', 'auth', 'confirmed',
         'idnumber', 'lang', 'theme', 'timezone', 'mailformat', 'description', 'descriptionformat',
@@ -341,6 +341,9 @@ function user_get_user_details($user, $course = null, array $userfields = array(
         }
         if (in_array('lastname', $userfields)) {
             $userdetails['lastname'] = $user->lastname;
+        }
+        if (in_array('middlename', $userfields)) {
+            $userdetails['middlename'] = $user->middlename;
         }
     }
     $userdetails['fullname'] = fullname($user, $canviewfullnames);

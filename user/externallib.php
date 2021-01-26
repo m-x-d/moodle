@@ -1088,6 +1088,8 @@ class core_user_external extends external_api {
             'username'    => new external_value(core_user::get_property_type('username'), 'The username', VALUE_OPTIONAL),
             'firstname'   => new external_value(core_user::get_property_type('firstname'), 'The first name(s) of the user', VALUE_OPTIONAL),
             'lastname'    => new external_value(core_user::get_property_type('lastname'), 'The family name of the user', VALUE_OPTIONAL),
+            'middlename'  => new external_value(core_user::get_property_type('middlename'), 'The middlename of the user',
+                VALUE_OPTIONAL),
             'fullname'    => new external_value(core_user::get_property_type('firstname'), 'The fullname of the user'),
             'email'       => new external_value(core_user::get_property_type('email'), 'An email address - allow email as root@localhost', VALUE_OPTIONAL),
             'address'     => new external_value(core_user::get_property_type('address'), 'Postal address', VALUE_OPTIONAL),
